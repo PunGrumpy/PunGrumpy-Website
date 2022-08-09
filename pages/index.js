@@ -90,10 +90,10 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Start learning to code
+          Start learning programming
         </BioSection>
         <BioSection>
-          <BioYear>Present</BioYear>
+          <BioYear>2022</BioYear>
           Study at 1st -{' '}
           <Link href="https://www.kmitl.ac.th/" target="_blank">
             King Mongkut&apos;s Institute of Technology Ladkrabang
@@ -114,7 +114,7 @@ const Home = () => (
           <Link href="https://500px.com/p/whatthepunphoto" target="_blank">
             Photography
           </Link>
-          , Custom Keyboard, Machine Learning
+          , Custom Keyboard, Cyber security
         </Paragraph>
       </Section>
 
