@@ -35,7 +35,7 @@ const Main = ({ children, router }) => {
           property="og:image"
           content="https://github.com/PunGrumpy/Grumpy-Website/blob/main/public/card.png?raw=true"
         />
-        <title>Grumpy - Website</title>
+        <title>PunGrumpy - Website</title>
       </Head>
 
       <NavBar path={router.asPath} />
