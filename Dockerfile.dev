@@ -1,0 +1,13 @@
+FROM node:19-alpine
+LABEL maintainer="PunGrumpy Homepage for developement"
+
+USER node
+
+RUN mkdir -p /home/node/app
+
+WORKDIR /home/node/app
+
+COPY --chown=node:node package.json ./
+
+RUN npm install && \
+    npm cache clean --force
