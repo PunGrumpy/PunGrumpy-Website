@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    command: npm start
