@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import {
   Link,
   Container,
@@ -66,8 +67,8 @@ const Home = () => (
               src="/images/grumpy.jpg"
               alt="Profile image"
               borderRadius="full"
-              width="100%"
-              height="100%"
+              width="100"
+              height="100"
             />
           </Box>
         </Box>
@@ -84,7 +85,11 @@ const Home = () => (
         <BioSection>
           <BioYear>2020</BioYear>
           Graduated from high school at{' '}
-          <Link href="http://www.sriayudhya.ac.th/" target="_blank">
+          <Link
+            as={NextLink}
+            href="http://www.sriayudhya.ac.th/"
+            target="_blank"
+          >
             Sriayudhya School
           </Link>
         </BioSection>
@@ -95,7 +100,7 @@ const Home = () => (
         <BioSection>
           <BioYear>2022</BioYear>
           Study at 1st -{' '}
-          <Link href="https://www.kmitl.ac.th/" target="_blank">
+          <Link as={NextLink} href="https://www.kmitl.ac.th/" target="_blank">
             King Mongkut&apos;s Institute of Technology Ladkrabang
           </Link>
         </BioSection>
@@ -107,11 +112,19 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Coding, Music,{' '}
-          <Link href="https://www.instagram.com/ansonseabra/" target="_blank">
+          <Link
+            as={NextLink}
+            href="https://www.instagram.com/ansonseabra/"
+            target="_blank"
+          >
             Singer
           </Link>
           , Playing Guitar,{' '}
-          <Link href="https://500px.com/p/whatthepunphoto" target="_blank">
+          <Link
+            as={NextLink}
+            href="https://500px.com/p/whatthepunphoto"
+            target="_blank"
+          >
             Photography
           </Link>
           , Custom Keyboard, Cyber security
