@@ -1,6 +1,6 @@
 {
   "name": "pungrumpy-homepage",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "PunGrumpy's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
