@@ -1,10 +1,24 @@
 FROM node:19 AS builder
+LABEL author="PunGrumpy"
 LABEL maintainer="PunGrumpy Homepage for production"
 
+ENV NODE_ENV=production
+
 WORKDIR /home/node/app
+
 COPY package*.json ./
 
-RUN NODE_OPTIONS=--optimize_for_size npm ci
+RUN npm ci
+
+FROM node:19-alpine AS production
+LABEL author="PunGrumpy"
+
+ENV NODE_ENV=production
+
+WORKDIR /home/node/app
+
+COPY --from=builder /home/node/app/node_modules ./node_modules
+
 COPY . .
 
-RUN NODE_OPTIONS=--optimize_for_size npm run build
+RUN npm run build
