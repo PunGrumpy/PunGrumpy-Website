@@ -1,6 +1,4 @@
 node_module
 .next
-package-lock.json
-yarn.lock
 .env
 .git
