@@ -4,7 +4,7 @@ LABEL maintainer="PunGrumpy Homepage for production"
 WORKDIR /home/node/app
 COPY package*.json ./
 
-RUN npm ci
+RUN NODE_OPTIONS=--optimize_for_size npm ci
 COPY . .
 
-RUN npm run build
+RUN NODE_OPTIONS=--optimize_for_size npm run build
