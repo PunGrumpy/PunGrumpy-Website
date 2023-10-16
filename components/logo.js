@@ -13,6 +13,11 @@ const LogoBox = styled.span`
   > img {
     transition: 200ms ease;
   }
+
+  &:hover > img {
+    transform: rotate(-20deg);
+    transition: 300ms ease-in-out;
+  }
 `
 
 const Logo = () => {
@@ -21,14 +26,14 @@ const Logo = () => {
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <Image src={ghostImage} width={30} height={30} alt="logo" />
+        <Image src={ghostImage} width={35} height={35} alt="logo" />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
           fontWeight="bold"
           ml={3}
         >
-          &nbsp;&nbsp;Noppakorn Kaewsalabnil
+          Noppakorn Kaewsalabnil
         </Text>
       </LogoBox>
     </Link>
