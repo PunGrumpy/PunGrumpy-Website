@@ -13,7 +13,6 @@ function Website({ Component, pageProps, router }) {
       <Fonts />
       <Layout router={router}>
         <AnimatePresence
-          exitBeforeEnter
           initial={true}
           onExitComplete={() => {
             if (typeof window !== 'undefined') {
