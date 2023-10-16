@@ -1,13 +1,14 @@
 {
   "name": "pungrumpy-homepage",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "PunGrumpy's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Noppakorn Kaewsalabnil",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "eslint": "^8.31.0",
     "eslint-config-next": "^13.1.1",
+    "husky": "^8.0.3",
     "prettier": "^2.8.2"
   }
 }
