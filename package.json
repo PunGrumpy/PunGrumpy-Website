@@ -26,8 +26,10 @@
     "three": "^0.148.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.5.4",
     "eslint": "^8.31.0",
     "eslint-config-next": "^13.1.1",
+    "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.2"
   }
