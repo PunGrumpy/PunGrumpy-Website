@@ -1,17 +1,25 @@
 {
   "name": "pungrumpy-homepage",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "PunGrumpy's website",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
     "lint": "next lint",
     "lintstaged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "next build && next export",
+    "deploy:vercel": "vercel --prod"
   },
-  "keywords": [],
+  "keywords": [
+    "next",
+    "react",
+    "chakra-ui",
+    "javascript"
+  ],
   "author": "Noppakorn Kaewsalabnil",
   "license": "MIT",
   "dependencies": {
