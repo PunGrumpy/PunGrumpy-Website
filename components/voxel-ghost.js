@@ -37,7 +37,6 @@ const VoxelGhost = () => {
       })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
-      renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
       const scene = new THREE.Scene()
@@ -63,7 +62,7 @@ const VoxelGhost = () => {
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      const ambientLight = new THREE.AmbientLight(0xcccccc, Math.PI)
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
