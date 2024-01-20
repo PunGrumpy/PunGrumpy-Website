@@ -7,8 +7,7 @@ import {
   Button,
   List,
   ListItem,
-  useColorModeValue,
-  chakra
+  useColorModeValue
 } from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
@@ -21,10 +20,6 @@ import {
   IoLogoLinkedin
 } from 'react-icons/io5'
 import Image from 'next/image'
-
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
 
 const Home = () => (
   <Layout>
@@ -63,7 +58,7 @@ const Home = () => (
             borderRadius="full"
             overflow="hidden"
           >
-            <ProfileImage
+            <Image
               src="/images/grumpy.jpg"
               alt="Profile image"
               borderRadius="full"
