@@ -10,4 +10,4 @@ services:
       - '9999'
     ports:
       - '9999:3000'
-    command: ['npm', 'start']
+    command: ['bun', 'run', 'start']
