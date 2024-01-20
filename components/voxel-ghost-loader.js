@@ -7,21 +7,25 @@ export const GhostSpinner = () => (
     position="absolute"
     left="50%"
     top="50%"
-    ml="calc(0px - var(--spinner-size) / 2)"
-    mt="calc(0px - var(--spinner-size))"
+    transform="translate(-50%, -50%)"
+    color="teal.500"
+    aria-label="Loading..."
+    thickness="4px"
+    speed="0.65s"
   />
 )
 
-export const GhostContainer = forwardRef(({ children }, ref) => (
+export const GhostContainer = forwardRef(({ children, ...props }, ref) => (
   <Box
     ref={ref}
     className="voxel-ghost"
     m="auto"
-    mt={['-20px', '-60px', '-120px']}
-    mb={['-40px', '-140px', '-200px']}
-    w={[280, 480, 640]}
-    h={[280, 480, 640]}
+    mt={{ base: '-20px', md: '-60px', lg: '-120px' }}
+    mb={{ base: '-40px', md: '-140px', lg: '-200px' }}
+    w={{ base: 280, md: 480, lg: 640 }}
+    h={{ base: 280, md: 480, lg: 640 }}
     position="relative"
+    {...props}
   >
     {children}
   </Box>
