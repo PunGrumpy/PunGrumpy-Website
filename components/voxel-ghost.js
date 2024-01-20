@@ -8,23 +8,47 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
+let loadedModelPromise = null
+const preloadModel = scene => {
+  if (!loadedModelPromise) {
+    loadedModelPromise = loadGLTFModel(scene, '/ghost.glb', {
+      receiveShadow: false,
+      castShadow: false,
+      simplifyMaterial: true
+    })
+  }
+
+  return loadedModelPromise
+}
+
 const VoxelGhost = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
+  const refScene = useRef()
+  const refCamera = useRef()
+  const refControls = useRef()
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
     const { current: container } = refContainer
-    if (container && renderer) {
+    const { current: camera } = refCamera
+
+    if (container && renderer && camera) {
       const scW = container.clientWidth
       const scH = container.clientHeight
+      const scale = scH * 0.005 + 4.8
 
+      camera.left = -scale
+      camera.right = scale
+      camera.top = scale
+      camera.bottom = -scale
+
+      camera.updateProjectionMatrix()
       renderer.setSize(scW, scH)
     }
   }, [])
 
-  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const { current: container } = refContainer
     if (container) {
@@ -39,7 +63,9 @@ const VoxelGhost = () => {
       renderer.setSize(scW, scH)
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
+
       const scene = new THREE.Scene()
+      refScene.current = scene
 
       const target = new THREE.Vector3(-0.5, 1.2, 0)
       const initialCameraPosition = new THREE.Vector3(
@@ -48,8 +74,6 @@ const VoxelGhost = () => {
         20 * Math.cos(0.2 * Math.PI)
       )
 
-      // 640 -> 240
-      // 8   -> 6
       const scale = scH * 0.005 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
@@ -61,6 +85,7 @@ const VoxelGhost = () => {
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
+      refCamera.current = camera
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, Math.PI)
       scene.add(ambientLight)
@@ -68,14 +93,11 @@ const VoxelGhost = () => {
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
+      refControls.current = controls
 
-      loadGLTFModel(scene, '/ghost.glb', {
-        receiveShadow: false,
-        castShadow: false,
-        simplifyMaterial: true
-      }).then(() => {
-        animate()
+      preloadModel(scene).then(() => {
         setLoading(false)
+        animate()
       })
 
       let req = null
@@ -84,7 +106,6 @@ const VoxelGhost = () => {
         req = requestAnimationFrame(animate)
 
         frame = frame <= 100 ? frame + 1 : frame
-
         if (frame <= 100) {
           const p = initialCameraPosition
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
@@ -106,6 +127,8 @@ const VoxelGhost = () => {
         cancelAnimationFrame(req)
         renderer.domElement.remove()
         renderer.dispose()
+        if (controls.dispose) controls.dispose()
+        scene.clear()
       }
     }
   }, [])
