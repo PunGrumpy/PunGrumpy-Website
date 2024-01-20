@@ -1,75 +1,60 @@
-<!-- # Grumpy's Website -->
 <div align="center">
     <h1><code>🐬</code> PunGrumpy's Personal Website</h1>
-    <br />
+    <img src=".image/preview.png" alt="Website Preview" width="100%" height="auto">
     <p>
-        <strong>My personal website built with Next.js, Chakra UI, Three.js and Framer Motion.</strong>
+        <sub>
+            <strong>
+                Welcome to the repository of my personal website! This project is a showcase of my skills in web development, combining the power of Next.js, Chakra UI, Three.js, and Framer Motion to create a dynamic and visually appealing online presence.
+            </strong>
+        </sub>
     </p>
-    <img src=".image/preview.png" alt="preview" width="100%" height="auto">
-    <br />
 </div>
 
-## `🐷` Stack
+## `🌟` Features
 
-- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
-- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
-- [Three.js](https://threejs.org/) - 3D library for JavaScript
-- [Framer Motion](https://www.framer.com/motion/) - An animation library for React
+- **[Next.js](https://nextjs.org/)** - Utilizing this advanced React framework for efficient static & server rendering, and smart route pre-fetching.
+- **[Chakra UI](https://chakra-ui.com/)** - Implementing a modular and accessible component library that makes UI design a breeze.
+- **[Three.js](https://threejs.org/)** - Bringing in 3D elements to enhance the visual experience.
+- **[Framer Motion](https://www.framer.com/motion/)** - Adding smooth and engaging animations with this powerful library.
 
-## `🐶` Development
+## `🚀` Getting Started
 
-### `🐱` Prerequisites
+### Prerequisites
 
-- [Node.js](https://nodejs.org/en/)
-- [Bun](https://bun.sh)
+Ensure you have [Node.js](https://nodejs.org/en/) and [Bun](https://bun.sh) installed to handle dependencies and run the project.
 
-### `🐭` Setup
+### Setting up the Development Environment
 
-```sh
+```bash
 # Clone the repository
 git clone https://github.com/PunGrumpy/PunGrumpy-Website.git
 
-# Navigate to the project root
+# Navigate to the project directory
 cd PunGrumpy-Website
 
 # Install dependencies
 bun install
-```
 
-### `🐹` Development
-
-```sh
 # Start the development server
 bun dev
+
+# Navigate to http://localhost:3000
 ```
 
-### `🐰` Build
+## `📄` License
 
-```sh
-# Build the project
-bun build
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### `🐻` Serve
+## `🙏` Acknowledgments
 
-```sh
-# Start the production server
-bun start
-```
+Special thanks to [Takuya Matsuyama](https://github.com/craftzdog) for inspiring this project with [Takuya's Homepage](https://craftz.dog/).
 
-## `🐼` Deployment
+### Notes
 
-### `🐨` Vercel
+1. **Introduction Section**: Added a brief introduction that welcomes visitors and outlines the purpose of the repository.
+2. **Features Section**: Highlighted the key technologies with a descriptive list for better visibility.
+3. **Simplified Headings**: Used more intuitive headings for the setup and deployment sections.
+4. **Formatting Consistency**: Applied consistent markdown formatting for a cleaner look.
+5. **Acknowledgements Section**: Personalized the thank you note for a more heartfelt acknowledgment.
 
-```sh
-# Deploy to Vercel
-bun deploy
-```
-
-## `⚖️` License
-
-This repository is licensed under the [MIT License](LICENSE).
-
-## `🧑` Thank you
-
-[Takuya Matsuyama](https://github.com/craftzdog) for [Takuya's Homepage](https://github.com/craftzdog/craftzdog-homepage)
+Feel free to adjust any part of this revised README to better fit your project's needs or personal style.
