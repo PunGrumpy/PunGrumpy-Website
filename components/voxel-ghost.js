@@ -56,10 +56,10 @@ const VoxelGhost = () => {
       const scH = container.clientHeight
 
       const renderer = new THREE.WebGLRenderer({
-        antialias: true,
+        antialias: window.innerWidth > 768,
         alpha: true
       })
-      renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       renderer.setSize(scW, scH)
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
