@@ -92,9 +92,9 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box flex={1} align="right" display="flex" justifyContent="flex-end">
           <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }} zIndex={2}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
