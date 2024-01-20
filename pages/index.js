@@ -29,13 +29,13 @@ const bioItems = [
   },
   {
     title: 'High School Education at',
-    years: '2015 - 2021',
+    years: '2015 to 2021',
     content: 'Sriayudhya School',
     href: 'http://www.sriayudhya.ac.th/'
   },
   {
     title: 'University Education at',
-    years: '2022 - Present',
+    years: '2022 to Present',
     content: "King Mongkut's Institute of Technology Ladkrabang",
     href: 'https://www.kmitl.ac.th/'
   }
