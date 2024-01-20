@@ -71,7 +71,8 @@ const VoxelGhost = () => {
 
       loadGLTFModel(scene, '/ghost.glb', {
         receiveShadow: false,
-        castShadow: false
+        castShadow: false,
+        simplifyMaterial: true
       }).then(() => {
         animate()
         setLoading(false)
