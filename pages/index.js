@@ -61,7 +61,6 @@ const Home = () => (
             <Image
               src="/images/grumpy.jpg"
               alt="Profile image"
-              borderRadius="full"
               width="100"
               height="100"
             />
