@@ -1,3 +1,37 @@
-node_modules
-.next
-.env
+# Node modules and build output
+**/node_modules/**
+dist/
+build/
+
+# Next.js
+**/.next/**
+out/
+
+# Vercel
+**/.vercel/**
+
+# Environment files
+**/.env.**
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Cache
+.cache/
+
+# Coverage reports
+coverage/
