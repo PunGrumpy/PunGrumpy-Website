@@ -12,6 +12,7 @@ export const GhostSpinner = () => (
     aria-label="Loading..."
     thickness="4px"
     speed="0.65s"
+    emptyColor="gray.200"
   />
 )
 

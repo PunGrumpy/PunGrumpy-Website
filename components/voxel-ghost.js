@@ -125,6 +125,7 @@ const VoxelGhost = () => {
 
       return () => {
         cancelAnimationFrame(req)
+        renderer.domElement.addEventListener('dblclick', null, false)
         renderer.domElement.remove()
         renderer.dispose()
         if (controls.dispose) controls.dispose()
