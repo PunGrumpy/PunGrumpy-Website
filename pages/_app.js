@@ -4,7 +4,6 @@ import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 function Website({ Component, pageProps, router }) {
   useEffect(() => {
@@ -29,7 +28,6 @@ function Website({ Component, pageProps, router }) {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
         <Analytics />
-        <SpeedInsights />
       </Layout>
     </Chakra>
   )
