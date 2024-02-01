@@ -5,8 +5,7 @@ import {
   Text,
   Container,
   Divider,
-  Button,
-  useColorModeValue
+  Button
 } from '@chakra-ui/react'
 
 const NotFound = () => {
@@ -16,12 +15,7 @@ const NotFound = () => {
       <Text>The page you&apos;re looking for was not found.</Text>
       <Divider my={6} />
       <Box my={6} align="center">
-        <Button
-          as={NextLink}
-          href="/"
-          colorScheme={useColorModeValue('purple', 'orange')}
-          size="lg"
-        >
+        <Button as={NextLink} href="/" colorScheme="purple">
           Return to home
         </Button>
       </Box>
