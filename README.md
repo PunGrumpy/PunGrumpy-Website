@@ -57,10 +57,4 @@ Special thanks to [Takuya Matsuyama](https://github.com/craftzdog) for inspiring
 4. **Formatting Consistency**: Applied consistent markdown formatting for a cleaner look.
 5. **Acknowledgements Section**: Personalized the thank you note for a more heartfelt acknowledgment.
 
----
-
-<div align="center">
-    <sub>
-        Feel free to adjust any part of this revised README to better fit your project's needs or personal style.
-    </sub>
-</div>
+Feel free to adjust any part of this revised README to better fit your project's needs or personal style.
